@@ -1,0 +1,25 @@
+name: Update AWS infra
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  aws-dev:
+    name: Update AWS infra - DEV
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/update-infra.yml
+    with:
+      env: dev
+      provider: aws
+      aws_account: XXXXXXXXXXXX
+
+  # aws-prod:
+  #   name: Update AWS infra - PROD
+  #   if: github.event_name == 'release'
+  #   uses: ./.github/workflows/update-infra.yml
+  #   with:
+  #     env: prod
+  #     provider: aws
+  #     aws_account: XXXXX
