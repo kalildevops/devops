@@ -7,6 +7,6 @@ include {
 }
 
 inputs = {
-  project                       = "azure-samples"
+  project                       = "azure-samples-kalil"
   resource_group_name           = "kalil_resource_group"
 }
