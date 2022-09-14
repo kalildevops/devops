@@ -14,6 +14,7 @@
 ## Terraform Modules
 
 ### [storage-container](./terraform/modules/storage-container/README.md)
+### [static-website](./terraform/modules/static-website/README.md)
 
 ## How to authenticate
 ```
@@ -32,6 +33,6 @@ export ARM_TENANT_ID="<tenant>"
 ## Update Infrastructure - Terragrunt commands
 ```
 cd iac/azure/terragrunt/subscription-sample/<environment>/<region>/
-terragrunt plan --terragrunt-working-dir storage-container
-terragrunt apply -auto-approve --terragrunt-working-dir storage-container
+terragrunt plan --terragrunt-working-dir <module_name>
+terragrunt apply -auto-approve --terragrunt-working-dir <module_name>
 ```
